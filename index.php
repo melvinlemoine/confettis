@@ -2,7 +2,13 @@
 /*
 Plugin Name: 🎊 Confettis
 Description: Balance des confettis lors de l'enregistrement ou la publication d'un post.
-Version: 1.0
+Version: 1.0.0
+License: GPLv2 or later
+Requires at least: 6.6.2
+Tested up to: 6.6
+Stable tag: 1.0.0
+Requires PHP: 8.2
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Author: Melvin Lemoine
 Author URI: https://melvin.studio
 */

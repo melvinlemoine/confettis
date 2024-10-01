@@ -48,10 +48,52 @@
     function launchConfetti() {
       console.log("Lancement des confettis");
       confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
+        particleCount: 250,
+        startVelocity: 50,
+        spread: 100,
+        origin: {
+          x: Math.random(),
+          // since they fall down, start a bit higher than random
+          y: Math.random() - 0.1,
+        },
       });
+      setTimeout(function () {
+        confetti({
+          particleCount: 250,
+          startVelocity: 50,
+          spread: 100,
+          origin: {
+            x: Math.random(),
+            // since they fall down, start a bit higher than random
+            y: Math.random() - 0.1,
+          },
+        });
+
+        setTimeout(function () {
+          confetti({
+            particleCount: 250,
+            startVelocity: 50,
+            spread: 100,
+            origin: {
+              x: Math.random(),
+              // since they fall down, start a bit higher than random
+              y: Math.random() - 0.1,
+            },
+          });
+          setTimeout(function () {
+            confetti({
+              particleCount: 250,
+              startVelocity: 50,
+              spread: 100,
+              origin: {
+                x: Math.random(),
+                // since they fall down, start a bit higher than random
+                y: Math.random() - 0.1,
+              },
+            });
+          }, 250);
+        }, 250);
+      }, 250);
     }
 
     // Vérifie le local storage lors du chargement de la page

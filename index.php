@@ -27,4 +27,21 @@ function confetti_plugin_enqueue_script($hook)
     wp_enqueue_script('confetti-custom-js', plugin_dir_url(__FILE__) . 'confetti.js', array('jquery'), '1.0', true);
 }
 
+function confetti_custom_styles()
+{
+    echo '<style>
+        canvas {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            z-index: 9999 !important;
+            pointer-events: none !important;
+        }
+    </style>';
+}
+add_action('admin_head', 'confetti_custom_styles');
+
+
 add_action('admin_enqueue_scripts', 'confetti_plugin_enqueue_script');

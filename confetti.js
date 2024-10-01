@@ -44,6 +44,11 @@
       console.log("Gutenberg non détecté");
     }
 
+    // Fonction pour générer une coordonnée aléatoire
+    function getRandomCoordinate() {
+      return Math.random() * (1 - 0) + 0; // Générer un nombre aléatoire entre min et max
+    }
+
     // Fonction pour lancer les confettis
     function launchConfetti() {
       console.log("Lancement des confettis");
@@ -52,9 +57,9 @@
         startVelocity: 50,
         spread: 100,
         origin: {
-          x: Math.random(),
+          x: getRandomCoordinate(),
           // since they fall down, start a bit higher than random
-          y: Math.random() - 0.1,
+          y: getRandomCoordinate(),
         },
       });
       setTimeout(function () {
@@ -63,9 +68,9 @@
           startVelocity: 50,
           spread: 100,
           origin: {
-            x: Math.random(),
+            x: getRandomCoordinate(),
             // since they fall down, start a bit higher than random
-            y: Math.random() - 0.1,
+            y: getRandomCoordinate(),
           },
         });
 
@@ -75,9 +80,9 @@
             startVelocity: 50,
             spread: 100,
             origin: {
-              x: Math.random(),
+              x: getRandomCoordinate(),
               // since they fall down, start a bit higher than random
-              y: Math.random() - 0.1,
+              y: getRandomCoordinate(),
             },
           });
           setTimeout(function () {
@@ -86,9 +91,9 @@
               startVelocity: 50,
               spread: 100,
               origin: {
-                x: Math.random(),
+                x: getRandomCoordinate(),
                 // since they fall down, start a bit higher than random
-                y: Math.random() - 0.1,
+                y: getRandomCoordinate(),
               },
             });
           }, 250);
